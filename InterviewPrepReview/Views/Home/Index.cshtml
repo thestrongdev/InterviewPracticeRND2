@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model InterviewPrepReview.Models.Home.IndexViewModel
+
+@{ 
+    var count = 1;
+    foreach(var planet in Model.AllPlanets)
+    {
+        <p>@count</p>
+        <p>NAME: @planet.name</p>
+        <p>CLIMATE: @planet.climate</p>
+        <br />
+       count++;
+    }
+} 
